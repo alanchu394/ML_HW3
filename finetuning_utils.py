@@ -3,7 +3,7 @@ import numpy as np
 from sklearn.metrics import precision_recall_fscore_support
 from sklearn.metrics import accuracy_score
 from transformers import RobertaConfig, RobertaModel
-from transformers import RobertaTokenizer, TFRobertaForSequenceClassification
+from transformers import RobertaTokenizer, RobertaForSequenceClassification
 
 def compute_metrics(eval_pred):
     """Computes accuracy, f1, precision, and recall from a 
@@ -30,4 +30,4 @@ def model_init():
     ## TODO: Return a pretrained RoBERTa model for sequence classification.
     ## See https://huggingface.co/transformers/model_doc/roberta.html#robertaforsequenceclassification.
 
-    return TFRobertaForSequenceClassification.from_pretrained("roberta-base")
+    return RobertaForSequenceClassification.from_pretrained("roberta-base")
