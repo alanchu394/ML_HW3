@@ -16,7 +16,7 @@ def compute_metrics(eval_pred):
     accuracy = 0
     precision = 0
     recall = 0
-    precision, recall, fbeta, support = precision_recall_fscore_support(labels, , average="binary" )
+    precision, recall, fbeta, support = precision_recall_fscore_support(labels, preds,average="binary")
     accuracy = accuracy_score(labels, preds)
     f1 = 2 * (precision * recall) / (precision + recall)
 
